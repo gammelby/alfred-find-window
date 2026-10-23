@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>dk.ulrik.window-switcher</string>
+	<key>connections</key>
+	<dict>
+		<key>5E0C1D2A-7B3F-4C11-9A6E-2F1B8D4C0A01</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5E0C1D2A-7B3F-4C11-9A6E-2F1B8D4C0A02</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>ug</string>
+	<key>description</key>
+	<string>Find Chrome tabs and iTerm2 sessions by title, URL, cwd or scrollback</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Window Switcher</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>w</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Looking through windows…</string>
+				<key>script</key>
+				<string>PATH="/opt/homebrew/bin:/usr/bin:$PATH" python3 search.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Chrome tabs and iTerm2 sessions</string>
+				<key>title</key>
+				<string>Switch to window</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5E0C1D2A-7B3F-4C11-9A6E-2F1B8D4C0A01</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>PATH="/opt/homebrew/bin:/usr/bin:$PATH" python3 focus.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5E0C1D2A-7B3F-4C11-9A6E-2F1B8D4C0A02</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Type `w` followed by words. Every word must match a tab title or URL, or a session name, cwd or recent scrollback. Set the SCROLLBACK_LINES variable to change how many scrollback lines are searched (default 300).</string>
+	<key>uidata</key>
+	<dict>
+		<key>5E0C1D2A-7B3F-4C11-9A6E-2F1B8D4C0A01</key>
+		<dict>
+			<key>xpos</key>
+			<real>40</real>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>5E0C1D2A-7B3F-4C11-9A6E-2F1B8D4C0A02</key>
+		<dict>
+			<key>xpos</key>
+			<real>260</real>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>SCROLLBACK_LINES</key>
+		<string>300</string>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
